@@ -22,7 +22,6 @@ public class AutoText {
     // We seem to need to wrap the text call in a try-catch block
     try {
       at.sendText();
-      System.out.println("Yo");
     } catch (Exception e) {
       System.out.println(e);
     }
