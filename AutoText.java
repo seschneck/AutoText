@@ -55,6 +55,6 @@ public class AutoText {
 
     // Send the text
     tmapi.call("GroupLeader", "broadcast_message", msoParams);
-    System.out.println("Allo");
+    System.out.println("Text sent");
   }
 }
