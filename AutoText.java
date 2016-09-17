@@ -61,7 +61,7 @@ public class AutoText {
     msoParams.put("msg", "Text test");
 
     // Send the text
-    tmapi.call("GroupLeader", "broadcast_message", msoParams);
+    tmapi.call("GroupLeader", "send_one_message", msoParams);
     System.out.println("Text sent");
   }
 
