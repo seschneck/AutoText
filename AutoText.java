@@ -6,26 +6,23 @@ public class AutoText {
     AutoText at = new AutoText();
 
     try {
-      at.sendText();
-      System.out.println("Allo");
+      String msg = "Testing the text sender thingy";
+      at.sendText(msg);
+      System.out.println("Text Sent:  " + msg);
     } catch (Exception e) {
       System.out.println(e);
     }
   }
 
-  public void sendText() throws Exception {
+  public void sendText(String msg) throws Exception {
     TextMarksV2APIClient tmapi = new TextMarksV2APIClient();
     Map<String,Object> msoParams = new HashMap();
-//    tmapi.setApiKey("MyAPIKEY_12345678");
     tmapi.setAuthUser("schneck2@wisc.edu");
     tmapi.setAuthPass("CurtinLab");
     msoParams.put("tm", "DEMOAID148");
-    msoParams.put("msg", "Dis is de text bug text bugging you");
-//    try {
-      tmapi.call("GroupLeader", "broadcast_message", msoParams);
-      System.out.println("Allo");
-//    } catch (TextMarksV2APIClientTransportException e) {
-//      System.out.println(e);
-//    }
+    msoParams.put("msg", msg);
+    msoParams.put("to", "6082932413");
+//    tmapi.call("GroupLeader", "broadcast_message", msoParams);
+    tmapi.call("GroupLeader", "send_one_message", msoParams);
   }
 }
