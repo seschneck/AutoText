@@ -15,6 +15,8 @@ import com.textmarks.api2client.*;
 
 // So far, this is the main (and only) class.  Its main method
 // makes an instance of itself and uses it to send text messages.
+//
+// user, password, and group name are passed in from command line.
 public class AutoText {
   public static void main(String[] args) {
     // Extract CLI params
@@ -42,11 +44,6 @@ public class AutoText {
   // authentication info and text content to populate an
   // api object, then use that object in a library call to
   // send the text.
-  //
-  // Susan's demo/test credentials:
-  //   User:  schneck2@wisc.edu
-  //   Pwd:           CurtinLab
-  //   Group:        DEMOAID148
   //
   // I haven't figured out what the "ApiKey" param is, but
   // it's optional, and apparently unnecessary for our
