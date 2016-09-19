@@ -57,11 +57,12 @@ public class AutoText {
     // tmapi.setApiKey("MyAPIKEY_12345678");  // What is this?
     tmapi.setAuthUser(user);
     tmapi.setAuthPass(pwd);
+    // tmapi.setTo(user);
     msoParams.put("tm", group);
-    msoParams.put("msg", "Text test");
+    msoParams.put("msg", "Text test 1");
 
     // Send the text
-    tmapi.call("GroupLeader", "send_one_message", msoParams);
+    tmapi.call("GroupLeader", "broadcast_message", msoParams);
     System.out.println("Text sent");
   }
 
