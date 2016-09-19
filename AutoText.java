@@ -59,7 +59,7 @@ public class AutoText {
     tmapi.setAuthPass(pwd);
     // tmapi.setTo(user);
     msoParams.put("tm", group);
-    msoParams.put("msg", "Text test 1");
+    msoParams.put("msg", "Text test " + (new java.util.Date()));
 
     // Send the text
     tmapi.call("GroupLeader", "broadcast_message", msoParams);
